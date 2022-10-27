@@ -1,0 +1,6 @@
+.vscode
+.idea
+instance
+website/*.db
+venv
+website/__pycache__
