@@ -5,9 +5,12 @@
 {% block content %}
 
     <div class="row no-gutters">
-        <div class="col-md-1 left-nav-bar">
+        <div class="col-md-1 col-sm-12 col-xs-12 left-nav-bar">
             <div class="left-nav-bar-logo">
                 <div>Chat50</div>
+            </div>
+            <div>
+                <button class="close-top-btn">&times;</button>
             </div>
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
@@ -25,7 +28,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-12 col-xs-12">
             <div class="left-nav-bar-tab-content tab-content" id="v-pills-tabContent">
 
                 <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
@@ -36,7 +39,7 @@
                     <div class="d-flex justify-content-center">
                         <div class="avatar-wrapper">
                             <img class="avatar"
-                                 src="{{  user.avatar if user.avatar else url_for('static', filename='/imgs/default-avatar.jpeg') }}"
+                                 src="{{ user.avatar if user.avatar else url_for('static', filename='/imgs/default-avatar.jpeg') }}"
                                  alt="">
                             <input type="file" name="avatar" class="avatar-input" id="avatar"/>
                             <i class="edit-avatar-btn fa-solid fa-pen-to-square"></i>
@@ -80,8 +83,95 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
-            chat box
+        <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-left">
+                        <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                             class="chat-avatar">
+                        <h4>Lilhuy</h4>
+                    </div>
+                </div>
+                <div class="chat-main">
+                    <div class="chat-element">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+
+                    <div class="chat-element not-me">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+
+                    <div class="chat-element not-me">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+
+                    <div class="chat-element">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+
+                     <div class="chat-element">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+
+                     <div class="chat-element">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+
+                     <div class="chat-element">
+                        <div class="chat-element-avatar">
+                            <img src="{{ url_for("static", filename="/imgs/default-avatar.jpeg") }}" alt="chater-avatar"
+                                 class="chat-avatar">
+                        </div>
+                        <div class="chat-element-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, esse, unde! Consequuntur
+                            doloribus fugit hic numquam obcaecati odio recusandae totam.
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer"></div>
+            </div>
         </div>
     </div>
 

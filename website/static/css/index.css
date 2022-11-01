@@ -7,7 +7,6 @@
 
 body {
     width: 100vw;
-    overflow: hidden;
 }
 
 /* Register Page */
@@ -31,6 +30,9 @@ body {
     background: #36404a;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    transition: height 0.5s;
+    user-select: none;
 }
 
 .left-nav-bar .nav-link {
@@ -38,6 +40,11 @@ body {
     font-size: 1.5rem;
     color: #ffffff;
 }
+
+.left-nav-bar.close {
+    height: 70px;
+}
+
 
 .left-nav-bar .nav-link.active {
     background: none;
@@ -90,6 +97,106 @@ body {
 #avatar {
     display: none;
 }
+
 #update-avatar-btn {
     display: none;
+}
+
+.close-top-btn {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    z-index: 100;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+
+}
+
+.close-top-btn:hover, .close-top-btn:focus {
+    border: none;
+    outline: none;
+}
+
+.chat-container {
+    background: #262e35;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding: 20px;
+}
+
+.chat-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.chat-avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-header-left h4 {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.chat-main {
+    padding: 20px;
+    overflow-y: scroll;
+    height: 80vh;
+    border-bottom: 1px solid #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.chat-main::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+.chat-main::-webkit-scrollbar-thumb {
+    background: #646d75;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.chat-main::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+.chat-element {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.chat-element.not-me {
+    flex-direction: row-reverse;
+}
+
+.chat-element-content {
+    background: #7269ef;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin: 0 10px;
 }

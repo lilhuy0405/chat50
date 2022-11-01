@@ -3,6 +3,8 @@ import {uploadFileToFireStore} from "./fire.js";
 const editBtn = document.querySelector('.edit-avatar-btn');
 const avatarInput = document.getElementById('avatar');
 const avatarEl = document.querySelector('.avatar');
+const closeTopBtn = document.querySelector('.close-top-btn');
+const navBar = document.querySelector('.left-nav-bar');
 editBtn.addEventListener('click', () => {
     avatarInput.click();
 })
@@ -68,3 +70,20 @@ async function uploadFile(file) {
         return null;
     }
 }
+
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+        closeTopBtn.style.display = 'block';
+
+    } else {
+        closeTopBtn.style.display = 'none';
+        navBar.classList.remove('close');
+        closeTopBtn.innerHTML = '&times;';
+    }
+});
+
+closeTopBtn.addEventListener('click', () => {
+    navBar.classList.toggle('close');
+    closeTopBtn.innerHTML = navBar.classList.contains('close') ? '&#9776;' : '&times;';
+});
